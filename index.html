@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>UMKM Marketplace @Rizka Fauziyah</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Halaman Edit Data</h1>
+
+        <form id="productForm" enctype="multipart/form-data">
+            <label for="nama">Nama Produk:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="detail">Detail Produk:</label>
+            <textarea id="detail" name="detail" required></textarea>
+
+            <label for="kategori">Kategori:</label>
+            <select id="kategori" name="kategori" required>
+                <option value="Makanan">Makanan</option>
+                <option value="Barang">Barang</option>
+                <option value="Lain-lain">Lain-lain</option>
+            </select>
+
+            <label>Jenis:</label>
+            <input type="checkbox" id="daurUlang" name="jenis[]" value="Produk Daur Ulang">
+            <label for="daurUlang">Produk Daur Ulang</label>
+            <input type="checkbox" id="lokal" name="jenis[]" value="Produk Lokal">
+            <label for="lokal">Produk Lokal</label>
+            <input type="checkbox" id="rumahan" name="jenis[]" value="Produk Rumahan">
+            <label for="rumahan">Produk Rumahan</label>
+
+            <label for="harga">Harga:</label>
+            <input type="number" id="harga" name="harga" required>
+
+            <label for="foto">Pilih Foto:</label>
+            <input type="file" id="foto" name="foto" accept="image/*" required>
+
+            <button type="submit" onclick="submitFormData()">Submit</button>
+        </form>
+
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Detail Produk</th>
+                    <th>Kategori</th>
+                    <th>Jenis</th>
+                    <th>Harga</th>
+                    <th>Foto</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <a href="home.html" class="homeButton">Home</a>
+
+    <script src="js/script.js"></script>
+</body>
+<footer>
+    Copyright &copy; 2023 Rizka Fauziyah
+</footer>
+</html>
